@@ -1,36 +1,5 @@
-.formInput {
-  border-radius: 20rem !important;
-  width: 13rem !important;
-}
-
-.buttonSubscribe {
-  background-color: white !important;
-  color: black !important;
-  border-color: #ff001f !important;
-}
-.buttonSubscribe:hover {
-  border-color: white !important;
-  color: white !important;
-  background-color: rgba(255, 0, 31, 0.85) !important;
-}
-.jumbotronNewsLetter {
-  background-color: #ff001f !important;
-  color: white;
-}
-.jumbotronFooter {
-  background-color: #c70039 !important;
-  color: white;
-  margin-bottom: 0 !important;
-}
-
-.footerNav {
-  color: white !important;
-  text-decoration: none !important;
-}
-
-.footerNav:hover {
-  color: black !important;
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  
+.footer {
+  background-color: #c4c4c4;
+  text-transform: uppercase;
+  font-family: "Gugi", cursive;
 }

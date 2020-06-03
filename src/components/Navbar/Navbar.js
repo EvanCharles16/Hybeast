@@ -8,125 +8,138 @@ import { connect } from "react-redux";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
 import "./Navbar.css";
-import Logo from "./../../image/logo.png";
-
-// const url = `${process.env.REACT_APP_API_URL}`;
 
 const Navbars = (props) => {
-	const [data, setData] = useState();
-	const [viewLogin, setViewLogin] = useState();
-	const history = useHistory();
-	const [user, setUser] = useState([]);
-	const URL = `https://api.indrakawasan.com/user/show`;
+  const [data, setData] = useState();
+  const [viewLogin, setViewLogin] = useState();
+  const history = useHistory();
+  const [user, setUser] = useState([]);
+  const URL = `https://api.indrakawasan.com/user/show`;
 
-	const logOut = () => {
-		props.logout();
-		history.push("/");
-	};
+  const logOut = () => {
+    props.logout();
+    history.push("/");
+  };
 
-	useEffect(
-		() => {
-			axios
-				.get(URL)
-				.then((res) => {
-					const user = res.data;
-					setUser(user);
-				})
-				.catch((err) => {
-					if (
-						err &&
-						err.response &&
-						err.response.data &&
-						err.response.data.message
-					) {
-						alert(err.response.data.message);
-					} else {
-						alert("Sorry , can't get the data from server..");
-					}
-				});
+  useEffect(
+    () => {
+      axios
+        .get(URL)
+        .then((res) => {
+          const user = res.data;
+          setUser(user);
+        })
+        .catch((err) => {
+          if (
+            err &&
+            err.response &&
+            err.response.data &&
+            err.response.data.message
+          ) {
+            alert(err.response.data.message);
+          } else {
+            alert("Sorry , can't get the data from server..");
+          }
+        });
 
-			if (props.viaLogin) {
-				setViewLogin(
-					<div className="showLogin">
-						<NavDropdown
-							className="mr-5 pr-3 navProfile nav-link-profile"
-							title={
-								<span>
-									<i className="fa fa-user fa-fw "></i>Profile
-								</span>
-							}
-						>
-							<NavDropdown.Item className="navDropItem">
-								<Link to="/profile" className="profileSetting">
-									<i className="fas fa-envelope fa-fw"></i> User Profile
-								</Link>
-							</NavDropdown.Item>
+      if (props.viaLogin) {
+        setViewLogin(
+          <div className="showLogin">
+            <NavDropdown
+              className="navProfile nav-link-profile pl-4 pr-4 text-center"
+              title={
+                <span>
+                  <i className="fa fa-user fa-fw "></i>Profile
+                </span>
+              }
+            >
+              <NavDropdown.Item className="navDropItem">
+                <Link to="/profile" className="profileSetting">
+                  <i className="fas fa-envelope fa-fw"></i> User Profile
+                </Link>
+              </NavDropdown.Item>
 
-							{/* <NavDropdown.Item className="navDropItem">
-									<Link to="/bookmark">
-										<i className="fas fa-bookmark mr-2"></i>Bookmark
-									</Link>
-								</NavDropdown.Item> */}
+              <NavDropdown.Item className="navDropItem">
+                <Link to={"/history"} className="profileSetting">
+                  <i className="far fa-clock mr-2"></i>History
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item className="navDropItem" onClick={logOut}>
+                <Link
+                  to="#"
+                  className="fas fa-sign-out-alt i-logout mr-2"
+                ></Link>
+                Logout
+              </NavDropdown.Item>
+            </NavDropdown>
+          </div>
+        );
+      } else {
+        setData();
+        setViewLogin(
+          <Nav>
+            <Link to="/login">
+              <Button className="signInButton signButton">
+                Sign In
+                <i className="fas fa-sign-in-alt ml-2"></i>
+              </Button>
+            </Link>
+          </Nav>
+        );
+      }
+    },
+    [props.viaLogin],
+    []
+  );
 
-							<NavDropdown.Item className="navDropItem">
-								<Link to={"/history"} className="profileSetting">
-									<i className="far fa-clock mr-2"></i>History
-								</Link>
-							</NavDropdown.Item>
-							<NavDropdown.Item className="navDropItem" onClick={logOut}>
-								<Link
-									to="#"
-									className="fas fa-sign-out-alt i-logout mr-2"
-								></Link>
-								Logout
-							</NavDropdown.Item>
-						</NavDropdown>
-					</div>
-				);
-			} else {
-				setData();
-				setViewLogin(
-					<Nav>
-						<Link to="/login">
-							<Button className="signInButton signButton">
-								Sign In
-								<i className="fas fa-sign-in-alt ml-2"></i>
-							</Button>
-						</Link>
-					</Nav>
-				);
-			}
-		},
-		[props.viaLogin],
-		[]
-	);
+  return (
+    <div>
+      <Navbar bg="warning" expand="lg" fixed="top">
+        <Link to="/">
+          <Navbar.Brand>Hybeast</Navbar.Brand>
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto navbar-nav">
+            {data}
+            <Nav>{viewLogin}</Nav>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
 
-	return (
-		<Navbar bg="white" variant="light" expand="lg" className="navbar fixed-top">
-			<Link to="/" className="ml-3 brand">
-				<img src={Logo} alt="logo" className="imageLogo" />
-			</Link>
-			<Navbar.Toggle aria-controls="toogle" />
-			<Navbar.Collapse id="toogle">
-				<Nav className="ml-auto navbar-nav">
-					{data}
-					<Link to="/event/create">
-						<Button className="signInButton mr-3 createButton">
-							<i className="fas fa-plus mr-2 "></i>
-							Create Events
-						</Button>
-					</Link>
-					<Nav className="navProfile">{viewLogin}</Nav>
-				</Nav>
-			</Navbar.Collapse>
-		</Navbar>
-	);
+      <Navbar bg="light" expand="lg" fixed="top" className="fixed-top-2">
+        <Navbar.Toggle aria-conLinktrols="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Link to="/" className="navbar-item">
+              Home
+            </Link>
+            <Link to="/product" className="navbar-item">
+              Products
+            </Link>
+            <Link to="/about" className="navbar-item">
+              About
+            </Link>
+            <Link to="/gallery" className="navbar-item">
+              Gallery
+            </Link>
+            <Link to="/contact" className="navbar-item">
+              Contact
+            </Link>
+          </Nav>
+          <Nav className="ml-auto mr-3">
+            <i class="fas fa-shopping-cart fa-2x"></i>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {
-	return {
-		viaLogin: state.login.viaLogin,
-	};
+  return {
+    viaLogin: state.login.viaLogin,
+  };
 };
 
 const mapDispatchToProps = { logout };

@@ -42,15 +42,21 @@
 
 .container-register button {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
-  color: #ffffff !important;
+  border: 1px solid black;
+  color: black !important;
+  background-color: #fce205;
   font-size: 12px;
   font-weight: bold;
   padding: 16px 27px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
+}
+
+.container-register button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 20px #c4c4c4;
 }
 
 .container-register button:active {
@@ -62,8 +68,17 @@
 }
 
 .container-register button.ghost {
-  background-color: transparent;
-  border-color: #ffffff;
+  color: black !important;
+  background-color: white;
+  border-color: black;
+  box-shadow: 0 0 0;
+}
+
+.container-register button.ghost:hover {
+  color: black !important;
+  background-color: #fce205;
+  border-color: black;
+  box-shadow: 2px 2px 20px #c4c4c4;
 }
 
 .register-form {
@@ -223,13 +238,13 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #f94c66;
+  background-color: #fce205;
   overflow-x: hidden;
   margin-top: 10%;
   padding: 10px 10px 10px 10px;
 }
 .sidebar a {
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -237,12 +252,12 @@
   margin: 0 5px;
   height: 40px;
   width: 40px;
-  color: white;
+  color: black;
   margin-left: 10px;
 }
 
 .sidebar a:hover {
-  color: #f94c66;
+  color: #ffd300;
   text-decoration: none;
   background-color: white;
 }
@@ -257,14 +272,14 @@
   color: black;
   text-decoration: none;
 }
-.passwordPrepend{
+.passwordPrepend {
   height: 75%;
   margin-top: 8px !important;
 }
-.password-icon{
+.password-icon {
   cursor: pointer;
 }
-.validateString{
+.validateString {
   font-size: 12px !important;
-  color:red;
+  color: red;
 }
