@@ -7,6 +7,8 @@ import { connect } from "react-redux";
 
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
+import logo from "../../image/Hybeast.png";
+
 import "./Navbar.css";
 
 const Navbars = (props) => {
@@ -96,6 +98,7 @@ const Navbars = (props) => {
     <div>
       <Navbar bg="warning" expand="lg" fixed="top">
         <Link to="/">
+          <img src={logo} alt="logo" className="logo-img" />
           <Navbar.Brand>Hybeast</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

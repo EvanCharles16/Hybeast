@@ -5,15 +5,15 @@ import "@brainhubeu/react-carousel/lib/style.css";
 
 import { Jumbotron, Row, Col } from "react-bootstrap";
 
-import music from "../../../image/category/music.jpg";
-import art from "../../../image/category/art.jpeg";
-import film from "../../../image/category/film.jpeg";
-import fashion from "../../../image/category/fashion.jpeg";
-import sport from "../../../image/category/sport.jpeg";
-import festival from "../../../image/category/festival.jpeg";
-import nightlife from "../../../image/category/nightlife.jpeg";
-import charity from "../../../image/category/charity.jpg";
-import education from "../../../image/category/Education.jpeg";
+import tshirt from "../../../image/category/tshirt.png";
+import shorts from "../../../image/category/short.png";
+import trousers from "../../../image/category/trousers.png";
+import sweater from "../../../image/category/sweater.png";
+import jacket from "../../../image/category/jacket.png";
+import hoodie from "../../../image/category/hoodie.png";
+import shoes from "../../../image/category/shoes.png";
+import socks from "../../../image/category/socks.png";
+import acc from "../../../image/category/acc.png";
 
 import "./Category.css";
 
@@ -59,50 +59,50 @@ export default class CategoryCarousel extends Component {
               >
                 <div className="text-center">
                   <img
-                    src={education}
-                    alt="Education"
+                    src={tshirt}
+                    alt="T-Shirt & Vests"
                     className="carouselImg"
                   />
                   <h4 className="categoryBlock">T-Shirts & Vests </h4>
                 </div>
                 <div className="text-center">
-                  <img src={music} alt="Music" className="carouselImg" />
-                  <h4 className="categoryBlock">Shirts</h4>
-                </div>
-                <div className="text-center">
-                  <img src={art} alt="Art" className="carouselImg" />
+                  <img src={shorts} alt="Shorts" className="carouselImg" />
                   <h4 className="categoryBlock">Shorts</h4>
                 </div>
                 <div className="text-center">
-                  <img src={film} alt="Film" className="carouselImg" />
+                  <img src={trousers} alt="Trousers" className="carouselImg" />
                   <h4 className="categoryBlock">Trousers</h4>
                 </div>
                 <div className="text-center">
-                  <img src={fashion} alt="Fashion" className="carouselImg" />
+                  <img
+                    src={sweater}
+                    alt="Sweatershirts"
+                    className="carouselImg"
+                  />
                   <h4 className="categoryBlock">Sweatershirts</h4>
                 </div>
                 <div className="text-center">
-                  <img src={sport} alt="Sport" className="carouselImg" />
+                  <img
+                    src={jacket}
+                    alt="Jacket & Coats"
+                    className="carouselImg"
+                  />
                   <h4 className="categoryBlock">Jacket & Coats</h4>
                 </div>
                 <div className="text-center">
-                  <img
-                    src={nightlife}
-                    alt="Nightlife"
-                    className="carouselImg"
-                  />
+                  <img src={hoodie} alt="Hoodie" className="carouselImg" />
                   <h4 className="categoryBlock">Hoodie</h4>
                 </div>
                 <div className="text-center">
-                  <img src={festival} alt="Festival" className="carouselImg" />
+                  <img src={shoes} alt="Shoes" className="carouselImg" />
                   <h4 className="categoryBlock">Shoes</h4>
                 </div>
                 <div className="text-center">
-                  <img src={charity} alt="Charity" className="carouselImg" />
+                  <img src={socks} alt="Socks" className="carouselImg" />
                   <h4 className="categoryBlock">Socks</h4>
                 </div>
                 <div className="text-center">
-                  <img src={charity} alt="Charity" className="carouselImg" />
+                  <img src={acc} alt="Accessories" className="carouselImg" />
                   <h4 className="categoryBlock">Accessories</h4>
                 </div>
               </Carousel>
