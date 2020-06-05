@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Formik, Form, ErrorMessage } from "formik";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 
 import * as Yup from "yup";
 
 import "./Register.css";
+
+// const url = `${process.env.REACT_APP_API_URL}`;
 
 const Register = () => {
   const history = useHistory();
@@ -16,9 +25,9 @@ const Register = () => {
   };
   return (
     <Container>
-      <div class="sidebar">
+      <div className="sidebar">
         <Link to="/">
-          <i class="fa fa-fw fa-home"></i>
+          <i className="fa fa-fw fa-home"></i>
         </Link>
       </div>
       <Row>
@@ -67,7 +76,7 @@ const Register = () => {
                   {(props, errors, touched) => (
                     <Form
                       className="register-form"
-                      autocomplete="off"
+                      autoComplete="off"
                       onSubmit={props.handleSubmit}
                     >
                       <h1 className="mb-4">Register</h1>
@@ -82,7 +91,7 @@ const Register = () => {
                         onBlur={props.handleBlur}
                         value={props.values.username}
                       />
-                      <p class="validateString">
+                      <p className="validateString">
                         <ErrorMessage name="username" />
                       </p>
                       <input
@@ -95,7 +104,7 @@ const Register = () => {
                         onBlur={props.handleBlur}
                         value={props.values.fullname}
                       />
-                      <p class="validateString">
+                      <p className="validateString">
                         <ErrorMessage name="fullname" />
                       </p>
                       <input
@@ -108,7 +117,7 @@ const Register = () => {
                         onBlur={props.handleBlur}
                         value={props.values.email}
                       />
-                      <p class="validateString">
+                      <p className="validateString">
                         <ErrorMessage name="email" />
                       </p>
                       <input
@@ -121,11 +130,12 @@ const Register = () => {
                         onBlur={props.handleBlur}
                         value={props.values.phone}
                       />
-                      <p class="validateString">
+                      <p className="validateString">
                         <ErrorMessage name="phone" />
                       </p>
-                      <div className="input-group-prepend mainPrependPassword">
-                        <input
+
+                      <InputGroup>
+                        <FormControl
                           type={passwordShown ? "text" : "password"}
                           placeholder="Password"
                           className="register-input"
@@ -135,14 +145,17 @@ const Register = () => {
                           onBlur={props.handleBlur}
                           value={props.values.password}
                         />
-                        <div className="input-group-text passwordPrepend">
-                          <i
-                            className="fa fa-eye password-icon"
-                            onClick={togglePasswordVisibility}
-                          ></i>
-                        </div>
-                      </div>
-                      <p class="validateString">
+                        <InputGroup.Append className="mt-2">
+                          <div className="input-group-text passwordPrepend">
+                            <i
+                              className="fa fa-eye password-icon"
+                              onClick={togglePasswordVisibility}
+                            ></i>
+                          </div>
+                        </InputGroup.Append>
+                      </InputGroup>
+
+                      <p className="validateString">
                         <ErrorMessage name="password" />
                       </p>
                       <Button variant="danger" type="submit" className="mt-3">

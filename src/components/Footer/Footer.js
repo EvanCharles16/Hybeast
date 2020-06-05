@@ -33,6 +33,14 @@ class Footer extends Component {
               <p>City,State,0000</p>
             </Col>
           </Row>
+
+          <hr className="border" />
+
+          <Row>
+            <Col md={{ offset: 4, span: 4 }}>
+              <h4 className="text-center">@Hybeast 2020</h4>
+            </Col>
+          </Row>
         </Container>
       </div>
     );

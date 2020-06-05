@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import { useHistory, Link, NavLink } from "react-router-dom";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
 
 import "./Login.css";
 import { connect } from "react-redux";
@@ -18,17 +25,17 @@ const Login = (props) => {
       [name]: value,
     });
   };
-  const history = useHistory();
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     props.login(data);
-    history.push("/login");
   };
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisibility = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+
   return (
     <div>
       <Container className="registerMainContainer">
@@ -45,7 +52,7 @@ const Login = (props) => {
                   <form
                     onSubmit={handleSubmit}
                     className="login-form"
-                    autocomplete="off"
+                    autoComplete="off"
                   >
                     <h1 className="mb-4">Sign in</h1>
 
@@ -58,8 +65,9 @@ const Login = (props) => {
                       value={data.email}
                       onChange={handleChange}
                     />
-                    <div className="input-group-prepend mainPrependPassword">
-                      <input
+
+                    <InputGroup>
+                      <FormControl
                         type={passwordShown ? "text" : "password"}
                         placeholder="Password"
                         className="login-input"
@@ -68,13 +76,16 @@ const Login = (props) => {
                         value={data.password}
                         onChange={handleChange}
                       />
-                      <div className="input-group-text passwordPrepend">
-                        <i
-                          className="fa fa-eye password-icon"
-                          onClick={togglePasswordVisibility}
-                        ></i>
-                      </div>
-                    </div>
+                      <InputGroup.Append className="mt-2">
+                        <div className="input-group-text passwordPrepend">
+                          <i
+                            className="fa fa-eye password-icon"
+                            onClick={togglePasswordVisibility}
+                          ></i>
+                        </div>
+                      </InputGroup.Append>
+                    </InputGroup>
+
                     <NavLink to="/register">Forgot your password?</NavLink>
                     <button>Sign In</button>
                   </form>
@@ -92,7 +103,7 @@ const Login = (props) => {
                         To keep connected with us please login with your
                         personal info
                       </p>
-                      <NavLink to="/register" style={{ color: "black" }}>
+                      <NavLink to="/register" style={{ color: "white" }}>
                         Don't have an account?
                       </NavLink>
                       <Link to="/register">
