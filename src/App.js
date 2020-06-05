@@ -20,6 +20,7 @@ import Detail from "./pages/Detail/Detail";
 import ShowAll from "./pages/Show_All/ShowAll";
 import Profile from "./pages/Profile/Profile";
 import History from "./pages/History/HistoryEvent";
+import Product from "./pages/Product/Main/Main";
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/event/:id" component={Detail} />
           <Route path="/profile" component={Profile} />
           <Route path="/history" component={History} />
+          <Route path="/product" component={Product} />
           <Route exact path="/" component={Main} />
         </Switch>
       </Router>

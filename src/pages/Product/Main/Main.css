@@ -1,0 +1,16 @@
+.product-container {
+  max-width: 1415px !important;
+  margin: auto;
+}
+
+button.productButton {
+  color: black !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.product-item {
+  color: black !important;
+}

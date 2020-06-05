@@ -82,9 +82,9 @@
   position: inherit !important;
 }
 
-a.nav-link {
+/* a.nav-link {
   background-color: #f8f9fa !important;
-}
+} */
 
 .navbar-item {
   color: black !important;
