@@ -28,6 +28,14 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.contactButton {
+  color: black !important;
+}
+
+.contactButton:hover {
+  color: white !important;
+}
+
 /* @media all and (min-width:320px){
   .contactCard{
     width: 350px !important;

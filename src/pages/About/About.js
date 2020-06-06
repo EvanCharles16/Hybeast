@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Navbar from "../../components/Navbar/Navbar";
@@ -8,11 +7,7 @@ import Footer from "../../components/Footer/Footer";
 
 import "./About.css";
 
-import calender from "../../image/calender.png";
-
-import contact from "../../image/about/contact.jpg";
-import host from "../../image/about/host.jpg";
-import event from "../../image/about/event.jpg";
+import logoAbout from "../../image/about/logo-about.png";
 
 class About extends Component {
   render() {
@@ -53,61 +48,7 @@ class About extends Component {
               </p>
             </Col>
             <Col md={6} sm={12}>
-              <img src={calender} alt="calender" className="calender-img" />
-            </Col>
-          </Row>
-        </Container>
-
-        <Container className="mb-5 pb-3 mt-4 ">
-          <Row>
-            <Col md={4} sm={12}>
-              <div className="photo-grid">
-                <div className="grid-item">
-                  <Link to="/event/create">
-                    <figure>
-                      <img src={host} height="100%" width="100%" alt="host" />
-                      <figcaption>
-                        <p>Organize an Event</p>
-                      </figcaption>
-                    </figure>
-                  </Link>
-                </div>
-              </div>
-            </Col>
-
-            <Col md={4} sm={12}>
-              <div className="photo-grid">
-                <div className="grid-item">
-                  <Link to="/">
-                    <figure>
-                      <img src={event} height="100%" width="100%" alt="event" />
-                      <figcaption>
-                        <p>Find your next Experience</p>
-                      </figcaption>
-                    </figure>
-                  </Link>
-                </div>
-              </div>
-            </Col>
-
-            <Col md={4} sm={12}>
-              <div className="photo-grid">
-                <div className="grid-item">
-                  <Link to="/contact">
-                    <figure>
-                      <img
-                        src={contact}
-                        height="100%"
-                        width="100%"
-                        alt="contact"
-                      />
-                      <figcaption>
-                        <p>Contact Us for more Information</p>
-                      </figcaption>
-                    </figure>
-                  </Link>
-                </div>
-              </div>
+              <img src={logoAbout} alt="logo" className="logo-about-img" />
             </Col>
           </Row>
         </Container>

@@ -132,9 +132,8 @@ class Contact extends Component {
                           </div>
 
                           <Button
-                            variant="outline-warning"
+                            variant="outline-dark contactButton"
                             block
-                            style={{ color: "black" }}
                             type="submit"
                           >
                             Send

@@ -89,7 +89,7 @@ body {
 .buttonMore {
   color: black !important;
   background: #ffc205 !important;
-  border-color: #ff001f !important;
+  border-color: black !important;
 }
 /* 
 @media (min-width: 1200px) and (max-width: 1500) {
