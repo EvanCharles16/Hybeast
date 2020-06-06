@@ -16,7 +16,11 @@ body {
 }
 
 .buttonSearch {
+  padding: 0.5rem;
+  margin-left: -16.8rem !important;
   border-radius: 20rem !important;
+  font-size: 1.2rem;
+  color: black !important;
 }
 .main-background {
   background: #ffc205 !important ;
@@ -35,11 +39,18 @@ body {
   width: 35rem !important;
   padding: 1.7rem 4rem !important;
   border-radius: 20rem !important;
+  margin: -1rem -17rem !important;
 }
+
+input.mainInput {
+  background-color: white !important;
+}
+
 .mainInput:focus {
-  border-color: #ff001f !important;
-  box-shadow: #ff001f !important;
+  border-color: black !important;
+  box-shadow: black !important;
 }
+
 .mainSearch {
   margin-left: -34rem;
   color: black;
@@ -55,7 +66,7 @@ body {
 .underlineMain {
   width: 180px;
   height: 3px;
-  background-color: #ffc205;
+  border: 2px solid #ffc205;
 }
 
 .rowEvent {

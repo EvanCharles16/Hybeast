@@ -14,7 +14,7 @@ button.BrainhubCarousel__arrowRight {
 .underlineCarousel {
   width: 180px;
   height: 2px;
-  background-color: #ffc205 !important;
+  border: 2px solid #ffc205;
 }
 
 .categoryBlock {

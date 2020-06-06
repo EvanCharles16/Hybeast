@@ -111,26 +111,7 @@ const ShowAll = (props) => {
           </Col>
         </Row>
 
-        {/* <Row>
-					<Form inline className="mx-auto" onSubmit={handleSubmit}>
-						<FormControl
-							type="text"
-							placeholder="Search Events"
-							className="mainInput"
-							name="search"
-							autoComplete="off"
-							defaultValue={searchQuery}
-							style={{ border: "1px solid black" }}
-						/>
-						<Button
-							type="submit"
-							variant="outline-success"
-							className="buttonSearch mainSearch"
-						>
-							<i className="fas fa-search"></i>
-						</Button>
-					</Form>
-				</Row> */}
+        {/* New Feature : Add Search bar for ShowAll Product */}
 
         <Container>
           <Row className="rowEvent">{showAll}</Row>

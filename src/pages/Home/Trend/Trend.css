@@ -36,7 +36,7 @@
 .underlineTrend {
   width: 210px;
   height: 3px;
-  background-color: #ffc205;
+  border: 2px solid #ffc205;
 }
 .trendCard {
   box-shadow: 0 5px 5px -2px gray;

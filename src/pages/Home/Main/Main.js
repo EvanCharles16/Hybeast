@@ -7,6 +7,8 @@ import {
   Jumbotron,
   Card,
   CardDeck,
+  Form,
+  FormControl,
 } from "react-bootstrap";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -54,7 +56,7 @@ const Main = () => {
       });
   }, []);
 
-  const showEvent = data.map((item, index) => {
+  const showProduct = data.map((item, index) => {
     const URL = `https://api.vannch.com/`;
     return (
       <Col lg={3} md={6} sm={10} className="my-2 mt-5 pt-2 pl-0 pr-0">
@@ -99,6 +101,24 @@ const Main = () => {
           <h1 className="text-center quotesLanding quotes2">
             "Style and Fashion is Quality."{" "}
           </h1>
+          <Row>
+            <Form
+              inline
+              className="mx-auto mt-5 pt-3"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <FormControl
+                type="text"
+                placeholder="Search Product by Name or Category"
+                className="mainInput"
+                name="search"
+                autoComplete="off"
+                ref={register({ required: true })}
+              />
+
+              <i className="fa fa-search buttonSearch "></i>
+            </Form>
+          </Row>
         </Container>
       </Jumbotron>
 
@@ -113,7 +133,7 @@ const Main = () => {
           <div className="underlineMain mb-4 ml-5"></div>
         </Row>
 
-        <Row className="rowEvent">{showEvent}</Row>
+        <Row className="rowEvent">{showProduct}</Row>
 
         <Row>
           <Col className="text-center mt-4 mb-3">
