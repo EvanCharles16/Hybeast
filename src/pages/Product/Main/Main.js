@@ -27,7 +27,7 @@ const Main = () => {
               to="/product"
               className="btn btn-light product-item mr-5 ml-5"
             >
-              T-shirt
+              T-shirt & Vests
             </Link>
             <Link
               to="/product/shorts"

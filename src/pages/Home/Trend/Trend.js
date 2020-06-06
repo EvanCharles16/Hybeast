@@ -53,6 +53,7 @@ const Trend = () => {
       <Col lg={3} md={6} sm={10} className="my-2 mt-5 pt-2 pl-0 pr-0">
         <CardDeck>
           <Card border="secondary" className="trendCard mr-5" key={index}>
+            <div style={{ borderTop: "1px solid black" }}></div>
             <Card.Img
               variant="top"
               src={`${URL}${item.imageProduct}`}
@@ -60,21 +61,12 @@ const Trend = () => {
             />
             <div style={{ borderTop: "1px solid black" }}></div>
             <Card.Body className="mainBody bg-white">
-              <Card.Text>{item.title}</Card.Text>
+              <Card.Text>{item.name}</Card.Text>
               <Card.Text>Category : {item.category}</Card.Text>
-              <Card.Text>
-                <FontAwesomeIcon icon={faCalendar} /> {item.date}
-              </Card.Text>
-              <Card.Text>
-                <FontAwesomeIcon icon={faClock} /> {item.time}
-              </Card.Text>
-              <Card.Text>
-                <i className="fas fa-map-marker-alt mr-2"></i>
-                {item.location}
-              </Card.Text>
+              <Card.Text>Rp.{item.price}</Card.Text>
               <Link
                 to={`/event/${item.id}`}
-                className="btn btn-outline-danger btn-block"
+                className="btn btn-outline-dark btn-block"
               >
                 Add to Cart
               </Link>
