@@ -6,21 +6,6 @@ body {
   font-family: "Gugi", cursive !important;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #ffc205;
-}
-::-webkit-scrollbar-thumb {
-  background: #ffc205;
-  border-radius: 8px;
-}
-:hover::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #ffc205;
-}
-
 .card {
   border-radius: 10px !important;
   overflow: hidden;
@@ -34,15 +19,15 @@ body {
   border-radius: 20rem !important;
 }
 .main-background {
-  background: url(./../../../image/backgroundhome.jpg) no-repeat;
+  background: #ffc205 !important ;
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 32rem;
+  height: 28rem;
 }
 
 .main-background h1 {
-  color: white;
+  color: black;
   font-weight: 700;
 }
 
@@ -91,7 +76,7 @@ body {
 }
 
 .mainBody {
-  height: 320px;
+  height: 200px;
 }
 
 .main-card:hover {

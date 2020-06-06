@@ -19,14 +19,14 @@ class Footer extends Component {
             </Col>
             <Col md={4} sm={12} className="text-center">
               <h5>Our Hours</h5>
-              <hr class="border" />
+              <hr className="border" />
               <p>Monday-Thursday</p>
               <p>Friday-Saturday</p>
               <p>Sunday</p>
             </Col>
             <Col md={4} sm={12} className="text-center">
               <h5>Service Area</h5>
-              <hr class="border" />
+              <hr className="border" />
               <p>City,State,0000</p>
               <p>City,State,0000</p>
               <p>City,State,0000</p>

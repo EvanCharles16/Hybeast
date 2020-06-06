@@ -44,7 +44,7 @@ function HistoryBooking() {
 							formData.append("imageProof", values.imageProof);
 
 							const res = await axios(
-								`https://api.indrakawasan.com/payment/create`,
+								`https://api.vannch.com/payment/create`,
 								{
 									method: "POST",
 									data: formData,
@@ -73,7 +73,7 @@ function HistoryBooking() {
 									onChange={props.handleChange}
 									value={props.values.sender}
 								/>
-								<p class="validateString">
+								<p className="validateString">
 									<ErrorMessage name="sender" />
 								</p>
 								<small className="form-text text-muted">
@@ -94,7 +94,7 @@ function HistoryBooking() {
 										value={props.values.totalAmount}
 									/>
 								</div>
-								<p class="validateString">
+								<p className="validateString">
 									<ErrorMessage name="totalAmount" />
 								</p>
 								<small className="form-text text-muted">
@@ -115,7 +115,7 @@ function HistoryBooking() {
 										);
 									}}
 								/>
-								<p class="validateString">
+								<p className="validateString">
 									<ErrorMessage name="imageProof" />
 								</p>
 								<small className="form-text text-muted">
@@ -143,7 +143,7 @@ function HistoryBooking() {
 	const userName = jwtdecode.fullname;
 
 	useEffect(() => {
-		const URL = `https://api.indrakawasan.com/booking/getName/${userName}`;
+		const URL = `https://api.vannch.com/booking/getName/${userName}`;
 
 		axios
 			.get(URL, {

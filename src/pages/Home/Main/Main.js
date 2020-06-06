@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faClock } from "@fortawesome/free-solid-svg-icons";
 import {
   Container,
   Row,
@@ -34,7 +32,7 @@ const Main = () => {
     });
   };
   useEffect(() => {
-    const URL = `https://api.indrakawasan.com/event/show`;
+    const URL = `https://api.vannch.com/product/show`;
 
     axios
       .get(URL)
@@ -57,7 +55,7 @@ const Main = () => {
   }, []);
 
   const showEvent = data.map((item, index) => {
-    const URL = `https://api.indrakawasan.com/`;
+    const URL = `https://api.vannch.com/`;
     return (
       <Col lg={3} md={6} sm={10} className="my-2 mt-5 pt-2 pl-0 pr-0">
         <CardDeck>
@@ -69,28 +67,19 @@ const Main = () => {
           >
             <Card.Img
               variant="top"
-              src={`${URL}${item.imageEvent}`}
-              alt="imageEvent"
+              src={`${URL}${item.imageProduct}`}
+              alt="imageProduct"
             />
             <div style={{ borderTop: "1px solid black" }}></div>
             <Card.Body className="mainBody bg-white">
-              <Card.Text>{item.title}</Card.Text>
+              <Card.Text>{item.name}</Card.Text>
               <Card.Text>Category : {item.category}</Card.Text>
-              <Card.Text>
-                <FontAwesomeIcon icon={faCalendar} /> {item.date}
-              </Card.Text>
-              <Card.Text>
-                <FontAwesomeIcon icon={faClock} /> {item.time}
-              </Card.Text>
-              <Card.Text>
-                <i className="fas fa-map-marker-alt mr-2"></i>
-                {item.location}
-              </Card.Text>
+              <Card.Text>Rp.{item.price}</Card.Text>
               <Link
                 to={`/event/${item.id}`}
-                className="btn btn-outline-danger btn-block"
+                className="btn btn-outline-dark btn-block"
               >
-                See More
+                Add to Cart
               </Link>
             </Card.Body>
           </Card>
@@ -105,9 +94,11 @@ const Main = () => {
       <Jumbotron fluid className="main-background">
         <Container className="pt-3 contQuotes">
           <h1 className="text-center mt-5 pt-3 mb-3 quotesLanding quotes1">
-            “What you need, is an Event, to remember for a lifetime.”
+            ➤➤➤ The Difference between ➤➤➤
           </h1>
-          <h1 className="text-center quotesLanding quotes2">― Rehan Waris ―</h1>
+          <h1 className="text-center quotesLanding quotes2">
+            "Style and Fashion is Quality."{" "}
+          </h1>
         </Container>
       </Jumbotron>
 
@@ -127,7 +118,7 @@ const Main = () => {
         <Row>
           <Col className="text-center mt-4 mb-3">
             <Link to="/showall" className="btn buttonMore mt-4 mb-4">
-              <h5>More Events</h5>
+              <h5>Show More</h5>
             </Link>
           </Col>
         </Row>

@@ -25,10 +25,10 @@ const Trend = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const URL = `https://api.indrakawasan.com/`;
+    const URL = `https://api.vannch.com/`;
 
     axios
-      .get(`${URL}event/show`)
+      .get(`${URL}product/show`)
       .then((res) => {
         const data = res.data.slice(1, 5);
         setData(data);
@@ -48,15 +48,15 @@ const Trend = () => {
   }, []);
 
   const showTrend = data.map((item, index) => {
-    const URL = `https://api.indrakawasan.com/`;
+    const URL = `https://api.vannch.com/`;
     return (
       <Col lg={3} md={6} sm={10} className="my-2 mt-5 pt-2 pl-0 pr-0">
         <CardDeck>
           <Card border="secondary" className="trendCard mr-5" key={index}>
             <Card.Img
               variant="top"
-              src={`${URL}${item.imageEvent}`}
-              alt="imageEvent"
+              src={`${URL}${item.imageProduct}`}
+              alt="imageProduct"
             />
             <div style={{ borderTop: "1px solid black" }}></div>
             <Card.Body className="mainBody bg-white">
@@ -76,7 +76,7 @@ const Trend = () => {
                 to={`/event/${item.id}`}
                 className="btn btn-outline-danger btn-block"
               >
-                See More
+                Add to Cart
               </Link>
             </Card.Body>
           </Card>

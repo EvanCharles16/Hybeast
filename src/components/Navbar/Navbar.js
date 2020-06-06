@@ -16,7 +16,7 @@ const Navbars = (props) => {
   const [viewLogin, setViewLogin] = useState();
   const history = useHistory();
   const [user, setUser] = useState([]);
-  const URL = `https://api.indrakawasan.com/event/show`;
+  const URL = `https://api.vannch.com/product/show`;
 
   const logOut = () => {
     props.logout();
@@ -111,7 +111,7 @@ const Navbars = (props) => {
       </Navbar>
 
       <Navbar bg="light" expand="lg" fixed="top" className="fixed-top-2">
-        <Navbar.Toggle aria-conLinktrols="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Link to="/" className="navbar-item">
@@ -131,7 +131,7 @@ const Navbars = (props) => {
             </Link>
           </Nav>
           <Nav className="ml-auto mr-3">
-            <i class="fas fa-shopping-cart fa-2x"></i>
+            <i className="fas fa-shopping-cart fa-2x"></i>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

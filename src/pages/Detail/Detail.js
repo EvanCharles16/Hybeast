@@ -41,7 +41,7 @@ function MyVerticallyCenteredModal(props) {
 		// console.log(value);
 
 		axios
-			.post(`https://api.indrakawasan.com/booking/create/`, value, {
+			.post(`https://api.vannch.com/booking/create/`, value, {
 				headers: {
 					"access-token": localStorage.getItem("access-token"),
 				},
@@ -146,7 +146,7 @@ const Detail = () => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		const URL = `https://api.indrakawasan.com/event/show/${id}`;
+		const URL = `https://api.vannch.com/product/show/${id}`;
 
 		axios
 			.get(URL)
@@ -170,7 +170,7 @@ const Detail = () => {
 	};
 
 	const showDetail = data.map((item, index) => {
-		const URL = `https://api.indrakawasan.com/`;
+		const URL = `https://api.vannch.com/`;
 
 		return (
 			<Card
@@ -183,8 +183,8 @@ const Detail = () => {
 					<Row className="rowCard">
 						<Col md={9} sm={12}>
 							<img
-								src={`${URL}${item.imageEvent}`}
-								alt="imageEvent"
+								src={`${URL}${item.imageProduct}`}
+								alt="imageProduct"
 								style={{ width: "50rem", height: "300px" }}
 								className="detailCardImage"
 							/>

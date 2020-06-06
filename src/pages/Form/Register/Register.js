@@ -59,7 +59,7 @@ const Register = () => {
                   onSubmit={(values, actions) => {
                     console.log(values);
 
-                    axios(`https://api.indrakawasan.com/user/register`, {
+                    axios(`https://api.vannch.com/user/register`, {
                       method: "POST",
                       data: values,
                     })

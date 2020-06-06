@@ -28,7 +28,7 @@ const ShowAll = (props) => {
 
 	// show data when user go to page
 	useEffect(() => {
-		const URL = `https://api.indrakawasan.com/event/show`;
+		const URL = `https://api.vannch.com/product/show`;
 		axios
 			.get(URL)
 			.then((res) => {
@@ -49,7 +49,7 @@ const ShowAll = (props) => {
 	}, []);
 
 	useEffect(() => {
-		const URL2 = `https://api.indrakawasan.com/event/show?search=${searchQuery}`;
+		const URL2 = `https://api.vannch.com/product/show?search=${searchQuery}`;
 
 		axios
 			.get(URL2)
@@ -103,7 +103,7 @@ const ShowAll = (props) => {
 	// 	const newSearch = event.target[0].value;
 	// 	console.log(newSearch);
 	// 	if (newSearch === "" && newSearch === null && newSearch === undefined) {
-	// 		const url2 = `https://api.indrakawasan.com/event/show`;
+	// 		const url2 = `https://api.vannch.com/product/show`;
 	// 		axios
 	// 			.get(url2)
 	// 			.then((res) => {
@@ -122,7 +122,7 @@ const ShowAll = (props) => {
 	// 				}
 	// 			});
 	// 	} else {
-	// 		const url = `https://api.indrakawasan.com/event/show/${newSearch}`;
+	// 		const url = `https://api.vannch.com/product/show/${newSearch}`;
 	// 		axios.get(url).then((res) => {
 	// 			setSearch(res.data);
 	// 		});

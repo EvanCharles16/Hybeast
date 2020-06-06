@@ -103,7 +103,7 @@ const Login = (props) => {
                         To keep connected with us please login with your
                         personal info
                       </p>
-                      <NavLink to="/register" style={{ color: "white" }}>
+                      <NavLink to="/register" style={{ color: "black" }}>
                         Don't have an account?
                       </NavLink>
                       <Link to="/register">
