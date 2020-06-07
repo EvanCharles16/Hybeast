@@ -6,13 +6,6 @@ import axios from "axios";
 const Tshirt = () => {
   const history = useHistory();
   const [data, setData] = useState([]);
-  const onSubmit = (values) => {
-    const { search } = values;
-    history.push({
-      pathname: "/showall",
-      search: `?search=${search}`,
-    });
-  };
 
   useEffect(() => {
     const URL = `https://api.vannch.com/product/show`;
@@ -20,7 +13,7 @@ const Tshirt = () => {
     axios
       .get(URL)
       .then((res) => {
-        const data = res.data;
+        const data = res.data.slice(10, 16);
         setData(data);
       })
       .catch((err) => {

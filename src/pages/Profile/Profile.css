@@ -1,13 +1,20 @@
 .profileBody {
-  height: 45rem;
+  height: 47rem;
 }
 
 .buttonProfile {
+  color: black !important;
+  border: 1px solid black !important;
   border-radius: 20rem !important;
 }
 
 .profileText {
   font-size: 30px;
+}
+
+.accountLink,
+.passwordLink {
+  margin-left: 0.7rem !important;
 }
 
 .underlineProfile {
@@ -17,33 +24,36 @@
 }
 
 .sidebarUser {
-  background-color: #ff001f !important;
+  background-color: black !important;
   position: fixed;
   font-size: 30px;
   padding: 10px;
-  border-color: #ff001f !important;
+  border-color: #ffd401 !important;
   display: inline !important;
 }
 .sidebarPassword {
-  background-color: #ff001f !important;
+  background-color: black !important;
   position: fixed;
   font-size: 30px;
   padding: 10px;
-  border-color: #ff001f !important;
+  border-color: #ffd401 !important;
   display: inline !important;
 }
+
+.passwordPrepend {
+  padding: 0.64rem 0.75rem !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
 .fa-userr {
-  color: white !important;
+  color: #ffd401 !important;
 }
-.fa-userr:hover {
-  color: rgb(226, 217, 217) !important;
-}
+
 .fa-lock {
-  color: white !important;
+  color: #ffd401 !important;
 }
-.fa-lock:hover {
-  color: rgb(226, 217, 217) !important;
-}
+
 @media all and (max-width: 768px) {
   .sidebarUser {
     z-index: 1;
@@ -66,10 +76,6 @@
     margin-left: 10px !important;
   }
   .cardPass {
-    width: 300px !important;
+    width: 550px !important;
   }
 }
-/* @media all and (min-width: 480px) {
-  .sidebarUser {
-  }
-} */

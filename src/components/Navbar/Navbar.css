@@ -16,30 +16,32 @@
 .signInButton {
   color: white !important;
   background: black !important;
-  border-color: #ffc205 !important;
+  border-color: #ffd401 !important;
 }
 .signInButton:hover {
   color: black !important;
-  background-color: yellow !important;
+  background-color: #ffd041 !important;
 }
 
 .logout-button {
   text-decoration: none !important;
   font-size: 24px;
-  color: black;
+  color: black !important;
 }
 
 .logout-button:hover {
   text-decoration: none !important;
   font-size: 24px;
-  color: #ff001f;
+  color: black !important;
+  color: #ffd041;
 }
 .navbar-nav {
   background-color: white !important;
   border-radius: 0px 0px 10px 10px;
 }
 .navDropItem:active {
-  background-color: #ff001f !important;
+  color: black !important;
+  background-color: #ffd041 !important;
 }
 
 .profileSetting {
@@ -60,10 +62,6 @@
 
 .historyButton:hover {
   color: black !important;
-}
-
-.i-logout:active {
-  color: white !important;
 }
 
 .navbar {

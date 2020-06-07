@@ -5,8 +5,8 @@
   overflow-y: hidden;
 }
 .login-input:focus {
-  border-color: #ff001f !important;
-  box-shadow: #ff001f !important;
+  border-color: #ffd401 !important;
+  box-shadow: #ffd401 !important;
 }
 .container-login {
   background: #f6f5f7;
@@ -80,7 +80,7 @@
 
 .container-login button.ghost:hover {
   color: black !important;
-  background-color: #fce205;
+  background-color: #ffd401;
   border-color: black;
   box-shadow: 2px 2px 20px #c4c4c4;
 }
@@ -165,8 +165,7 @@
 }
 
 .overlay {
-  background: #ff416c;
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #ffd401;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;

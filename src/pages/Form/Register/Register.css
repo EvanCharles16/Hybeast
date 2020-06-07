@@ -88,7 +88,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 50px 50px;
-  height: 40rem;
+  height: 50rem;
   text-align: center;
 }
 
@@ -156,8 +156,7 @@
 }
 
 .overlay {
-  background: #ff416c;
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #ffd401;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -223,7 +222,7 @@
 }
 .home-container a:hover {
   border: 1px solid white;
-  color: #f94c66;
+  color: #ffd401;
   background-color: white;
   border-radius: 50%;
   display: inline-flex;
@@ -288,5 +287,5 @@
 }
 .validateString {
   font-size: 12px !important;
-  color: red;
+  color: #ffd401;
 }

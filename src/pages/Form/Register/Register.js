@@ -158,7 +158,7 @@ const Register = () => {
                       <p className="validateString">
                         <ErrorMessage name="password" />
                       </p>
-                      <Button variant="danger" type="submit" className="mt-3">
+                      <Button variant="warning" type="submit" className="mt-3">
                         Sign Up
                       </Button>
                     </Form>
@@ -172,7 +172,7 @@ const Register = () => {
                     <p>Enter your personal details and start journey with us</p>
                     <p>Have an account?</p>
                     <Link to="/login">
-                      <Button className="ghost" variant="outline-danger">
+                      <Button className="ghost" variant="outline-warning">
                         Sign In
                       </Button>
                     </Link>

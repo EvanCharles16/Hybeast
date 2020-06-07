@@ -123,9 +123,6 @@ const Navbars = (props) => {
             <Link to="/about" className="navbar-item">
               About
             </Link>
-            <Link to="/gallery" className="navbar-item">
-              Gallery
-            </Link>
             <Link to="/contact" className="navbar-item">
               Contact
             </Link>

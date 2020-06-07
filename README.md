@@ -10,4 +10,3 @@
 - (-)Sort By Category
 - (-)Shopping Cart
 - (-)Profile (Edit Profile, History)
-- (-)Footer

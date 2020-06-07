@@ -107,7 +107,7 @@ const Login = (props) => {
                         Don't have an account?
                       </NavLink>
                       <Link to="/register">
-                        <Button variant="danger" className="ghost" id="signUp">
+                        <Button variant="warning" className="ghost" id="signUp">
                           Sign Up
                         </Button>
                       </Link>

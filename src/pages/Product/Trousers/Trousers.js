@@ -13,7 +13,7 @@ const Tshirt = () => {
     axios
       .get(URL)
       .then((res) => {
-        const data = res.data;
+        const data = res.data.slice(19, 22);
         setData(data);
       })
       .catch((err) => {
