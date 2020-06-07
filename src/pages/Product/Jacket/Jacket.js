@@ -33,7 +33,13 @@ const Tshirt = () => {
   const showProduct = data.map((item, index) => {
     const URL = `https://api.vannch.com/`;
     return (
-      <Col lg={3} md={6} sm={10} className="my-2 mt-5 pt-2 pl-0 pr-0">
+      <Col
+        lg={3}
+        md={6}
+        sm={10}
+        className="my-2 mt-5 pt-2 pl-0 pr-0"
+        key={index}
+      >
         <CardDeck>
           <Card
             border="secondary"
@@ -75,7 +81,7 @@ const Tshirt = () => {
           <div
             className=" mb-4 ml-5"
             style={{
-              border: "2px solid #ffc205",
+              border: "2px solid #FFD401",
               height: "2px",
               width: "130px",
             }}

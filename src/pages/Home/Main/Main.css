@@ -23,7 +23,7 @@ body {
   color: black !important;
 }
 .main-background {
-  background: #ffc205 !important ;
+  background: #ffd401 !important ;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -66,7 +66,7 @@ input.mainInput {
 .underlineMain {
   width: 180px;
   height: 3px;
-  border: 2px solid #ffc205;
+  border: 2px solid #ffd401;
 }
 
 .rowEvent {
@@ -99,7 +99,7 @@ input.mainInput {
 
 .buttonMore {
   color: black !important;
-  background: #ffc205 !important;
+  background: #ffd401 !important;
   border-color: black !important;
 }
 /* 

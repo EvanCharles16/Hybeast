@@ -20,7 +20,7 @@
 
 .buttonCreate.mx-auto {
   color: black;
-  background: #ffc205;
+  background: #ffd401;
   border-color: #000 !important;
   width: 12rem;
   font-size: 1.5rem !important;
@@ -36,7 +36,7 @@
 .underlineTrend {
   width: 210px;
   height: 3px;
-  border: 2px solid #ffc205;
+  border: 2px solid #ffd401;
 }
 .trendCard {
   box-shadow: 0 5px 5px -2px gray;

@@ -28,7 +28,7 @@ class About extends Component {
                 What is{" "}
                 <span
                   style={{
-                    borderBottom: "3px solid #ffc205",
+                    borderBottom: "3px solid #FFD401",
                     fontWeight: "bold",
                   }}
                 >

@@ -3,7 +3,7 @@
 .underlineAbout {
   width: 180px;
   height: 2px;
-  background-color: #ffc205 !important;
+  background-color: #ffd401 !important;
 }
 
 .logo-about-img {
@@ -28,5 +28,5 @@ p.about-text {
 .underlineAbout {
   width: 180px;
   height: 2px;
-  border: 2px solid #ffc205;
+  border: 2px solid #ffd401;
 }

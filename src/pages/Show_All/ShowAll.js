@@ -114,7 +114,7 @@ const ShowAll = (props) => {
         {/* New Feature : Add Search bar for ShowAll Product */}
 
         <Container>
-          <Row className="rowEvent">{showAll}</Row>
+          <Row className="rowEvent mb-5">{showAll}</Row>
         </Container>
       </Container>
 

@@ -29,7 +29,7 @@ const Main = () => {
   const onSubmit = (values) => {
     const { search } = values;
     history.push({
-      pathname: "/showall",
+      pathname: "/showAll",
       search: `?search=${search}`,
     });
   };

@@ -81,7 +81,7 @@ const Navbars = (props) => {
         setViewLogin(
           <Nav>
             <Link to="/login">
-              <Button className="signInButton signButton">
+              <Button className="signInButton">
                 Sign In
                 <i className="fas fa-sign-in-alt ml-2"></i>
               </Button>
@@ -96,7 +96,7 @@ const Navbars = (props) => {
 
   return (
     <div>
-      <Navbar bg="warning" expand="lg" fixed="top">
+      <Navbar expand="lg" fixed="top" style={{ backgroundColor: "#FFD401" }}>
         <Link to="/">
           <img src={logo} alt="logo" className="logo-img" />
           <Navbar.Brand>Hybeast</Navbar.Brand>
