@@ -18,6 +18,15 @@ const Navbars = (props) => {
   const [user, setUser] = useState([]);
   const URL = `https://api.vannch.com/product/show`;
 
+  const pushKlik = () => {
+    const token = localStorage.getItem("access-token");
+    if (!token) {
+      history.push("/login");
+    } else {
+      history.push("/event/create");
+    }
+  };
+
   const logOut = () => {
     props.logout();
     history.push("/");
@@ -105,6 +114,12 @@ const Navbars = (props) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto navbar-nav">
             {data}
+            <Link to="/product/create">
+              <Button className="signInButton" onClick={pushKlik}>
+                <i className="fas fa-plus "></i>
+                Create Products
+              </Button>
+            </Link>
             <Nav>{viewLogin}</Nav>
           </Nav>
         </Navbar.Collapse>

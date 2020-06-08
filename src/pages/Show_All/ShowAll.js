@@ -17,8 +17,6 @@ import Footer from "../../components/Footer/Footer";
 import "./../Home/Main/Main.css";
 import "./ShowAll.css";
 
-// const url = `${process.env.REACT_APP_API_URL}`;
-
 const ShowAll = (props) => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState([]);

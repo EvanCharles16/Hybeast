@@ -58,7 +58,8 @@ const Tshirt = () => {
               <Card.Text>Category : {item.category}</Card.Text>
               <Card.Text>Rp.{item.price}</Card.Text>
               <Link
-                to={`/event/${item.id}`}
+                // to={`/event/${item.id}`}
+                to="#"
                 className="btn btn-outline-dark btn-block"
               >
                 Add to Cart

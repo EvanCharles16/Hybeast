@@ -5,8 +5,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import jwt from "jwt-decode";
 
-// const url = `${process.env.REACT_APP_API_URL}`;
-
 const EditPassword = () => {
   const URL = `https://api.vannch.com/`;
   const token = localStorage.getItem("access-token");

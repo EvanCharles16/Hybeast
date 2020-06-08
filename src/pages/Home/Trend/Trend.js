@@ -19,8 +19,6 @@ import { Link } from "react-router-dom";
 
 import "./Trend.css";
 
-// const url = `${process.env.REACT_APP_API_URL}`;
-
 const Trend = () => {
   const [data, setData] = useState([]);
 
@@ -65,7 +63,8 @@ const Trend = () => {
               <Card.Text>Category : {item.category}</Card.Text>
               <Card.Text>Rp.{item.price}</Card.Text>
               <Link
-                to={`/event/${item.id}`}
+                // to={`/event/${item.id}`}
+                to="#"
                 className="btn btn-outline-dark btn-block"
               >
                 Add to Cart
@@ -83,7 +82,7 @@ const Trend = () => {
         <Container className="containerHost">
           <h1 className="mb-4 hostEvent">Sell Your Own Products</h1>
           <Form inline>
-            <Link to="/event/create">
+            <Link to="/product/create">
               <Button className="buttonCreate both-line-light mx-auto">
                 Create Products
               </Button>

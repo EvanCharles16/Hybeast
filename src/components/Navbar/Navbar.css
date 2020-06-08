@@ -16,11 +16,6 @@
 .signInButton {
   color: white !important;
   background: black !important;
-  border-color: #ffd401 !important;
-}
-.signInButton:hover {
-  color: black !important;
-  background-color: #ffd041 !important;
 }
 
 .logout-button {
@@ -39,6 +34,11 @@
   background-color: white !important;
   border-radius: 0px 0px 10px 10px;
 }
+
+.navProfile {
+  background-color: #ffd041;
+}
+
 .navDropItem:active {
   color: black !important;
   background-color: #ffd041 !important;
@@ -71,18 +71,15 @@
 
 /*  */
 
-.showLogin .navProfile {
-  background-color: #f8f9fa;
-}
-
 .fixed-top-2 {
   margin-top: 74px;
   position: inherit !important;
 }
 
-/* a.nav-link {
-  background-color: #f8f9fa !important;
-} */
+a.nav-link {
+  color: white !important;
+  background-color: black !important;
+}
 
 .navbar-item {
   color: black !important;

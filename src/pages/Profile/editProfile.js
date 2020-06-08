@@ -6,8 +6,6 @@ import jwt from "jwt-decode";
 
 import "./Profile.css";
 
-// const url = `${process.env.REACT_APP_API_URL}`;
-
 const EditProfile = () => {
   const URL = `https://api.vannch.com/`;
   const defaultValue = `${URL}public/images/2020-05-23T11:48:46.274Zicon.png`;
